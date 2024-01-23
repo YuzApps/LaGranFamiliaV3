@@ -8,6 +8,9 @@ dependencies:
   '@nuxt/ui':
     specifier: ^2.12.3
     version: 2.12.3(nuxt@3.9.3)(vite@5.0.12)(vue@3.4.15)
+  '@vercel/speed-insights':
+    specifier: ^1.0.7
+    version: 1.0.7(vue-router@4.2.5)(vue@3.4.15)
 
 devDependencies:
   nuxt:
@@ -1659,6 +1662,34 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+
+  /@vercel/speed-insights@1.0.7(vue-router@4.2.5)(vue@3.4.15):
+    resolution: {integrity: sha512-1XYZO/OlrAco8QPoXXIOPoMrj0O+slB9k6poRo1drQJ+DWTbdUUT18Mtm4ybA8KMj4mGEMEgbw0BKR/yq/VPhA==}
+    requiresBuild: true
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      vue: 3.4.15
+      vue-router: 4.2.5(vue@3.4.15)
+    dev: false
 
   /@vitejs/plugin-vue-jsx@3.1.0(vite@5.0.11)(vue@3.4.15):
     resolution: {integrity: sha512-w9M6F3LSEU5kszVb9An2/MmXNxocAnUb3WhRr8bHlimhDrXNt6n6D2nJQR3UXpGlZHh/EsgouOHCsM8V3Ln+WA==}
