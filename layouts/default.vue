@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-
 </script>
 
 <template>
   <div>
-    Layout: default
-    <slot />
+    <TheHeading />
+    <UContainer>
+      <slot />
+    </UContainer>
     <SpeedInsights />
   </div>
 </template>
