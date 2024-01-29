@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { IconGynecology, IconHeartPlus } from "#components";
+
 const primaryFeatures = [
   {
     name: "Nuevo Servicio de Ginecología",
     description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
-    icon: resolveComponent("IconGynecology"),
+    icon: IconGynecology,
   },
   {
     name: "Atendemos Todo Tipo de Enfermedad",
     description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
-    icon: resolveComponent("IconHeartPlus"),
+    icon: IconHeartPlus,
   },
 ];
 </script>
