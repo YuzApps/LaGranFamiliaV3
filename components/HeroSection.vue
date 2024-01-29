@@ -35,7 +35,7 @@
               <div class="mt-10 flex items-center gap-x-6">
                 <a
                   href="#"
-                  class="rounded-full bg-curious-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  class="rounded-full bg-curious-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >Llamanos</a
                 >
               </div>

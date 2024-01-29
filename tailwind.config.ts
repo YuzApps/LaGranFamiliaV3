@@ -5,6 +5,7 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         "curious-blue": "#288FBD",
+        "bahama-blue": "#006897",
         "salem-green": "#099343",
       },
       fontFamily: {
