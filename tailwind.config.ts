@@ -8,6 +8,7 @@ export default <Partial<Config>>{
         "curious-blue": "#288FBD",
         "bahama-blue": "#006897",
         "salem-green": "#099343",
+        "tropaz-blue": "#2B5895",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

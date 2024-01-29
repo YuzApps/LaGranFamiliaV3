@@ -1,27 +1,24 @@
 <script setup lang="ts">
-import { IconGynecology, IconHeartPlus } from "#components";
-
 const uiCard = {
   base: "text-stratos-blue",
   divider: "divide-y-0 divide-gray-50",
   ring: "ring-0",
 };
 
-const primaryFeatures = [
+const primaryFeatures = reactive([
   {
-    name: "Servicios de Laboratorio",
+    name: "Nuevo Servicio de Ginecología",
     description:
       "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
-    href: "/services",
     icon: "IconGynecology",
   },
   {
-    name: "Servicios de Rayos X",
+    name: "Atendemos Todo Tipo de Enfermedad",
     description:
       "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
     icon: "IconHeartPlus",
   },
-];
+]);
 </script>
 <template>
   <div class="bg-white mt-1.5">
@@ -41,18 +38,27 @@ const primaryFeatures = [
           >
             <div
               v-for="feature in primaryFeatures"
-              :key="feature.name"
+              :key="feature.icon"
               class="relative pl-16"
             >
-              <dt class="text-base font-semibold leading-7 text-stratos-blue">
+              <dt
+                class="text-[20px] font-semibold leading-7 text-tropaz-blue font-maven"
+              >
                 <div
                   class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg"
                 >
-                  <component :is="feature.icon" />
+                  <template v-if="feature.icon === 'IconGynecology'">
+                    <LazyIconGynecology />
+                  </template>
+                  <template v-else>
+                    <LazyIconHeartPlus />
+                  </template>
                 </div>
                 {{ feature.name }}
               </dt>
-              <dd class="mt-2 text-base leading-7">
+              <dd
+                class="mt-2 text-base font-normal font-montserrat leading-7 tracking-wide text-stratos-blue"
+              >
                 {{ feature.description }}
               </dd>
             </div>
