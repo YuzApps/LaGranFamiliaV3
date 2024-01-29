@@ -24,7 +24,7 @@ const primaryFeatures = reactive([
   <div class="bg-white mt-1.5">
     <div class="relative">
       <div
-        class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-4 lg:py-20"
+        class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-4 lg:py-20"
       >
         <div class="px-6 lg:px-0 lg:pt-0">
           <iframe

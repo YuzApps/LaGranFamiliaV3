@@ -43,7 +43,7 @@ const mobileMenuOpen = ref(false);
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a
           href="#"
-          class="text-sm bg-curious-blue font-normal tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150"
+          class="text-base bg-curious-blue font-normal font-montserrat tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150"
           >Contacto
         </a>
       </div>

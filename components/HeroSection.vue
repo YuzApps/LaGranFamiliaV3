@@ -15,8 +15,7 @@
                   <span
                     class="inline-flex items-center uppercase space-x-2 text-sm font-medium leading-6 text-[#2B5895]/40"
                   >
-                    <span>Clínica General La Gran Familia</span>
-                    <UIcon name="i-heroicons-chevron-right" />
+                    Clínica General La Gran Familia
                   </span>
                 </a>
               </div>
@@ -36,7 +35,9 @@
                 <a
                   href="#"
                   class="rounded-full bg-curious-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >Llamanos</a
+                >
+                  <UIcon name="i-heroicons-phone animate-ping" />
+                  <span class="ml-2">Llámanos</span></a
                 >
               </div>
             </div>

@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt";
     <UContainer class="lg:px-6">
       <slot />
     </UContainer>
+    <TheFooter />
     <SpeedInsights />
   </div>
 </template>
