@@ -5,7 +5,7 @@
   <div class="bg-white mt-1.5">
     <div class="relative">
       <div
-        class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-4 lg:py-20"
+        class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-4 lg:py-20"
       >
         <div class="px-6 lg:px-0 lg:pt-4">
           <div class="mx-auto max-w-2xl">
@@ -21,13 +21,13 @@
                 </a>
               </div>
               <h1
-                class="mt-4 text-lg font-semibold tracking-tight text-[#2B5895] sm:text-2xl"
+                class="mt-4 text-lg font-semibold tracking-wide text-[#2B5895] sm:text-2xl font-maven"
               >
                 Comprometidos con el
                 <span class="text-salem-green capitalize">bienestar</span> de
                 nuestros pacientes
               </h1>
-              <p class="mt-6 text-lg leading-6 text-gray-600">
+              <p class="mt-6 text-lg leading-6 text-gray-600 font-montserrat">
                 Ya sea que busque consulta o evaluaciones, contamos con el
                 equipo y los conocimientos necesarios para brindarle servicios
                 de calidad.
@@ -43,9 +43,9 @@
           </div>
         </div>
         <div
-          class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen"
+          class="mt-20 sm:mt-24 text-center md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen"
         >
-          <img src="/hero.svg" alt="Hero" />
+          <NuxtImg src="/hero.svg" alt="Hero" class="mx-auto h-full w-auto" />
         </div>
       </div>
       <div

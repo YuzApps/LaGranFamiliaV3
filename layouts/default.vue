@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 <template>
   <div>
     <TheHeading />
-    <UContainer>
+    <UContainer class="lg:px-6">
       <slot />
     </UContainer>
     <SpeedInsights />

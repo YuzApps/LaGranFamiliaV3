@@ -10,7 +10,7 @@ const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-  <header class="bg-white font-sans shadow-md z-10">
+  <header class="bg-white font-montserrat shadow-md z-10">
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       aria-label="Global"

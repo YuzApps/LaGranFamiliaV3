@@ -8,7 +8,8 @@ export default <Partial<Config>>{
         "salem-green": "#099343",
       },
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        maven: ["Maven Pro", "sans-serif"],
       },
       aspectRatio: {
         auto: "auto",
