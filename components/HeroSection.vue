@@ -1,8 +1,6 @@
-<script setup lang="ts">
-//import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-</script>
+<script setup lang="ts"></script>
 <template>
-  <div class="bg-white mt-1.5">
+  <div class="mt-1.5">
     <div class="relative">
       <div
         class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-4 lg:py-20"

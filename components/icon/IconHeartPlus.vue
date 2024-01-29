@@ -10,23 +10,10 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
   >
     <rect x="4" y="4" width="48" height="48" rx="24" fill="#D8DFF3" />
-    <rect
-      x="4"
-      y="4"
-      width="48"
-      height="48"
-      rx="24"
-      stroke="#EEF2FF"
-      stroke-width="8"
-    />
+    <rect x="4" y="4" width="48" height="48" rx="24" stroke="#EEF2FF" stroke-width="8" />
     <rect x="16" y="16" width="24" height="24" fill="url(#pattern0)" />
     <defs>
-      <pattern
-        id="pattern0"
-        patternContentUnits="objectBoundingBox"
-        width="1"
-        height="1"
-      >
+      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
         <use xlink:href="#image0_27_56355" transform="scale(0.00195312)" />
       </pattern>
       <image

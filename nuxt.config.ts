@@ -19,4 +19,17 @@ export default defineNuxtConfig({
   ui: {
     icons: ["mdi", "lucide", "medical-icon"], //'lucide', 'fontawesome', 'heroicons', 'mdi', 'carbon',
   },
+
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "es-MX",
+      },
+      bodyAttrs: {
+        class: "bg-white h-full",
+      },
+      titleTemplate: "%s - Clinica la Gran Familia",
+      title: "Inicio",
+    },
+  },
 });
