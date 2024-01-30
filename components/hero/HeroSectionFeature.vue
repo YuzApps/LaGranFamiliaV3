@@ -8,22 +8,22 @@ const primaryFeatures = [
     icon: resolveComponent("IconLightbulbQuestion"),
   },
   {
-    name: "Collaborate",
+    name: "Cómo Empezamos",
     description:
-      "Ofrecemos servicios médicos de alta calidad mediante tecnología avanzada, enfocados en la salud y bienestar de tu familia.",
-    icon: resolveComponent("IconBookAlt"),
+      "Nuestra compañía médica nació con el compromiso de calidad y atención a las necesidades de los pacientes.",
+    icon: resolveComponent("IconDiamond"),
   },
   {
-    name: "Task scheduling",
+    name: "Nuestra Mision",
     description:
       "Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.",
     icon: resolveComponent("IconFlag"),
   },
   {
-    name: "Task scheduling",
+    name: "Biografía",
     description:
-      "Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.",
-    icon: resolveComponent("IconDiamond"),
+      'La Clínica General "La Gran Familia" ofrece servicios de salud respetuosos y cercanos, asegurando inclusión y consejos para una vida saludable.',
+    icon: resolveComponent("IconBookAlt"),
   },
 ];
 </script>
@@ -31,7 +31,7 @@ const primaryFeatures = [
 <template>
   <!-- Feature section -->
   <div class="mx-auto mt-10 max-w-7xl px-6 sm:mt-4 lg:px-8 mb-10 sm:mb-12">
-    <div class="mx-auto mt-16 max-w-2xl sm:mt-10 lg:mt-20 lg:max-w-none">
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-10 lg:mt-16 lg:max-w-none">
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-20 lg:max-w-none lg:grid-cols-3">
         <div class="col-span-1 flex flex-col space-y-10">
           <div v-for="feature in primaryFeatures.slice(0, 2)" :key="feature.name" class="flex flex-col text-center">
