@@ -1,52 +1,5 @@
 <script setup lang="ts">
-const pricing = {
-  frequencies: [
-    { value: "monthly", label: "Monthly", priceSuffix: "/month" },
-    { value: "annually", label: "Annually", priceSuffix: "/year" },
-  ],
-  tiers: [
-    {
-      name: "Freelancer",
-      id: "tier-freelancer",
-      href: "#",
-      price: { monthly: "$30", annually: "$288" },
-      description: "The essentials to provide your best work for clients.",
-      features: ["5 products", "Up to 1,000 subscribers", "Basic analytics", "48-hour support response time"],
-      mostPopular: false,
-    },
-    {
-      name: "Startup",
-      id: "tier-startup",
-      href: "#",
-      price: { monthly: "$60", annually: "$576" },
-      description: "A plan that scales with your rapidly growing business.",
-      features: [
-        "25 products",
-        "Up to 10,000 subscribers",
-        "Advanced analytics",
-        "24-hour support response time",
-        "Marketing automations",
-      ],
-      mostPopular: true,
-    },
-    {
-      name: "Enterprise",
-      id: "tier-enterprise",
-      href: "#",
-      price: { monthly: "$90", annually: "$864" },
-      description: "Dedicated support and infrastructure for your company.",
-      features: [
-        "Unlimited products",
-        "Unlimited subscribers",
-        "Advanced analytics",
-        "1-hour, dedicated support response time",
-        "Marketing automations",
-        "Custom reporting tools",
-      ],
-      mostPopular: false,
-    },
-  ],
-};
+import { serviceCollection } from "~/data/dataSeeder";
 </script>
 <template>
   <div>
@@ -120,7 +73,7 @@ const pricing = {
     </div>
 
     <!-- Pricing section -->
-    <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 lg:px-8 py-10">
+    <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-10 lg:px-8 pt-10 pb-5">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="text-base font-semibold leading-7 text-[#099541]/45">SERVICIOS</h1>
         <p class="mt-2 text-4xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-5xl">
@@ -135,22 +88,17 @@ const pricing = {
       <div
         class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-3"
       >
-        <div
-          v-for="tier in pricing.tiers"
-          :key="tier.id"
-          :class="[tier.mostPopular ? 'ring-2 ring-indigo-600' : 'ring-1 ring-gray-200', 'rounded-3xl p-8']"
-        >
-          <h2
-            :id="tier.id"
-            :class="[tier.mostPopular ? 'text-indigo-600' : 'text-gray-900', 'text-lg font-semibold leading-8']"
-          >
+        <div v-for="tier in serviceCollection" :key="tier.id" :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']">
+          <h2 :id="tier.id" class="font-maven text-tropaz-blue font-semibold text-center">
             {{ tier.name }}
           </h2>
-          <p class="mt-4 text-sm leading-6 text-gray-600">{{ tier.description }}</p>
+
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-            <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">
-              <UIcon name="i-heroicons-check" class="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              {{ feature }}
+            <li v-for="feature in tier.items" :key="feature" class="flex gap-x-3 font-montserrat text-sm">
+              <div class="rounded-full bg-[#D8DFF3] size-7 flex flex-shrink-0 items-center justify-center">
+                <UIcon name="i-heroicons-check" class="h-5 w-5 flex-none text-[#4754AA]" aria-hidden="true" />
+              </div>
+              {{ feature.name }}
             </li>
           </ul>
         </div>

@@ -15,5 +15,5 @@ trim_trailing_whitespace = true
 indent_size = 2
 
 
-[*.vue]
+[*.{vue,js,jsx,ts,tsx}]
 indent_size = 2
