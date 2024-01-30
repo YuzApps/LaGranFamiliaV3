@@ -2,9 +2,7 @@
 <template>
   <div class="mt-1.5">
     <div class="relative">
-      <div
-        class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-4 lg:py-20"
-      >
+      <div class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:px-4 lg:py-20">
         <div class="px-6 lg:px-0 lg:pt-4">
           <div class="mx-auto max-w-2xl">
             <div class="max-w-lg">
@@ -17,17 +15,13 @@
                   </span>
                 </a>
               </div>
-              <h1
-                class="mt-4 text-lg font-semibold tracking-wide text-[#2B5895] sm:text-2xl font-maven"
-              >
+              <h1 class="mt-2 text-xl font-semibold tracking-wide text-[#2B5895] sm:text-3xl font-maven">
                 Comprometidos con el
-                <span class="text-salem-green capitalize">bienestar</span> de
-                nuestros pacientes
+                <span class="text-salem-green capitalize">bienestar</span> de nuestros pacientes
               </h1>
               <p class="mt-6 text-lg leading-6 text-gray-600 font-montserrat">
-                Ya sea que busque consulta o evaluaciones, contamos con el
-                equipo y los conocimientos necesarios para brindarle servicios
-                de calidad.
+                Ya sea que busque consulta o evaluaciones, contamos con el equipo y los conocimientos necesarios para
+                brindarle servicios de calidad.
               </p>
               <div class="mt-10 flex items-center gap-x-6">
                 <a
@@ -41,15 +35,11 @@
             </div>
           </div>
         </div>
-        <div
-          class="mt-20 sm:mt-24 text-center md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen"
-        >
+        <div class="mt-20 sm:mt-24 text-center md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
           <NuxtImg src="/hero.svg" alt="Hero" class="mx-auto h-full w-auto" />
         </div>
       </div>
-      <div
-        class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"
-      />
+      <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
     </div>
   </div>
 </template>
