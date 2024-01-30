@@ -14,9 +14,9 @@ const primaryFeatures = [
     icon: resolveComponent("IconDiamond"),
   },
   {
-    name: "Nuestra Mision",
+    name: "Nuestra Misión",
     description:
-      "Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.",
+      "Promover y mejorar la salud con prevención y tratamiento de enfermedades, enfocándonos en el cuidado humano y personalizado.",
     icon: resolveComponent("IconFlag"),
   },
   {
