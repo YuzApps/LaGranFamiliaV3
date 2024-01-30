@@ -88,7 +88,12 @@ import { serviceCollection } from "~/data/dataSeeder";
       <div
         class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-3"
       >
-        <div v-for="tier in serviceCollection" :key="tier.id" :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']">
+        <div
+          v-for="tier in serviceCollection"
+          :key="tier.id"
+          class="drop-shadow-md shadow-[#4754AA] bg-white rounded-3xl p-8"
+          :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']"
+        >
           <h2 :id="tier.id" class="font-maven text-tropaz-blue font-semibold text-center">
             {{ tier.name }}
           </h2>
