@@ -91,7 +91,7 @@ import { serviceCollection } from "~/data/dataSeeder";
         <div
           v-for="tier in serviceCollection"
           :key="tier.id"
-          class="drop-shadow-md shadow-[#4754AA] bg-white rounded-3xl p-8"
+          class="drop-shadow-[0_10px_10px_rgba(71,84,170,0.25)] bg-white rounded-3xl p-8"
           :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']"
         >
           <h2 :id="tier.id" class="font-maven text-tropaz-blue font-semibold text-center">
