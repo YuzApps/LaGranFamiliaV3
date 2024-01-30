@@ -5,12 +5,12 @@ const primaryFeatures = [
   {
     name: "Nuevo Servicio de Ginecología",
     description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
-    icon: IconGynecology,
+    icon: "IconGynecology",
   },
   {
     name: "Atendemos Todo Tipo de Enfermedad",
     description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades.",
-    icon: IconHeartPlus,
+    icon: "IconHeartPlus",
   },
 ];
 </script>
@@ -28,7 +28,14 @@ const primaryFeatures = [
           <div v-for="feature in primaryFeatures" :key="feature.icon" class="relative pl-16">
             <dt class="text-[20px] font-semibold leading-7 text-tropaz-blue font-maven">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
-                <Component :is="feature.icon" class="text-stratos-blue" />
+                <IconFeature size="xl">
+                  <template v-slot:icon>
+                    <NuxtImg
+                      :src="feature.icon === 'IconGynecology' ? '/img/uterus.png' : '/img/health-care.png'"
+                      class="w-5 h-5 text-tropaz-blue"
+                    />
+                  </template>
+                </IconFeature>
               </div>
               {{ feature.name }}
             </dt>
