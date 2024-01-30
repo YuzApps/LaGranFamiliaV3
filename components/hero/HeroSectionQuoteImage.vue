@@ -32,26 +32,38 @@
         "
       />
     </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-32">
+    <div class="mx-auto max-w-2xl py-24 sm:py-24 lg:py-28">
       <div class="text-center">
-        <h1 class="text-2xl font-medium font-montserrat tracking-wide text-white sm:text-2xl">
-          En la clínica me encontré cuidados de alta calidad y un trato cálido. Me sentí como en casa y completamente
-          atendida. ¡Altamente recomendable!
-        </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-300">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-          fugiat veniam occaecat fugiat aliqua.
-        </p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="#"
-            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-            >Get started</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-white"
-            >Learn more <span aria-hidden="true">→</span></a
-          >
-        </div>
+        <figure class="mt-10">
+          <blockquote class="text-2xl font-medium font-montserrat tracking-wide text-white sm:text-2xl">
+            <p>
+              En la clínica me encontré cuidados de alta calidad y un trato cálido. Me sentí como en casa y
+              completamente atendida. ¡Altamente recomendable!”
+            </p>
+          </blockquote>
+          <figcaption class="mt-10">
+            <img
+              class="mx-auto h-10 w-10 rounded-full"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
+            />
+            <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+              <div class="font-medium font-montserrat text-white">Judith Black</div>
+              <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+                <circle cx="1" cy="1" r="1" />
+              </svg>
+              <div class="text-gray-600">
+                <div class="flex gap-x-1 text-yellow-300">
+                  <UIcon name="i-heroicons-star-solid" class="h-5 w-5 flex-none fill-amber-300" aria-hidden="true" />
+                  <UIcon name="i-heroicons-star-solid" class="h-5 w-5 flex-none fill-amber-300" aria-hidden="true" />
+                  <UIcon name="i-heroicons-star-solid" class="h-5 w-5 flex-none fill-amber-300" aria-hidden="true" />
+                  <UIcon name="i-heroicons-star-solid" class="h-5 w-5 flex-none fill-amber-300" aria-hidden="true" />
+                  <UIcon name="i-heroicons-star-solid" class="h-5 w-5 flex-none fill-amber-300" aria-hidden="true" />
+                </div>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div
