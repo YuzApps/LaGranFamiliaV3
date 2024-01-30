@@ -14,5 +14,6 @@ useSeoMeta({
     <HeroSection />
     <HeroSectionQuote />
     <HeroSectionFeature />
+    <HeroSectionQuoteImage />
   </div>
 </template>
