@@ -1,23 +1,29 @@
 <template>
   <footer class="bg-[#F1F7FF]">
+    <UContainer class="px-6 py-10 sm:py-5">
+      <div class="md:flex md:items-center md:justify-between">
+        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+          <div v-for="item in items.main" :key="item.name" class="pb-6">
+            <a :href="item.href" class="text-sm leading-6 text-gray-600 hover:text-gray-900">{{ item.name }}</a>
+          </div>
+        </nav>
+        <div>
+          <NuxtImg src="/img/LogoFooter.png" alt="Logo" class="h-auto w-auto mx-auto" />
+        </div>
+      </div>
+    </UContainer>
     <div
-      class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
+      class="mx-auto border-t border-gray-900/10 max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
     >
       <div class="flex justify-center space-x-6 md:order-2">
-        <a
-          v-for="item in navigation"
-          :key="item.name"
-          :href="item.href"
-          class="text-gray-400 hover:text-gray-500"
-        >
+        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">{{ item.name }}</span>
           <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
         </a>
       </div>
       <div class="mt-8 md:order-1 md:mt-0">
         <p class="text-center text-xs leading-5 text-gray-500">
-          &copy; {{ new Date().getFullYear() }} Your Company, Inc. All rights
-          reserved.
+          &copy; {{ new Date().getFullYear() }} Your Company, Inc. All rights reserved.
         </p>
       </div>
     </div>
@@ -26,6 +32,33 @@
 
 <script setup lang="ts">
 import { defineComponent, h } from "vue";
+
+const items = {
+  main: [
+    { name: "Marketing", href: "#" },
+    { name: "Analytics", href: "#" },
+    { name: "Commerce", href: "#" },
+    { name: "Insights", href: "#" },
+  ],
+  support: [
+    { name: "Pricing", href: "#" },
+    { name: "Documentation", href: "#" },
+    { name: "Guides", href: "#" },
+    { name: "API Status", href: "#" },
+  ],
+  company: [
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Partners", href: "#" },
+  ],
+  legal: [
+    { name: "Claim", href: "#" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
+  ],
+};
 
 const navigation = [
   {
