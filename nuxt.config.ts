@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/google-fonts"],
 
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 
   colorMode: {
     preference: "light",
