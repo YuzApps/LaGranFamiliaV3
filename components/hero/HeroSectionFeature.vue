@@ -31,6 +31,17 @@ const primaryFeatures = [
 <template>
   <!-- Feature section -->
   <div class="mx-auto mt-10 max-w-7xl px-6 sm:mt-4 lg:px-8 mb-10 sm:mb-12">
+    <div class="flex items-center justify-center text-center">
+      <div class="leading-7">
+        <span class="text-[#099541]/45 font-maven uppercase">Sobre Nosotros</span>
+        <h2 class="text-tropaz-blue py-3 tracking-wide font-maven text-3xl font-medium leading-7">
+          Descubre Nuestros Valores y Compromiso con tu Salud
+        </h2>
+        <p class="font-montserrat text-stratos-blue mt-2 text-[18px]">
+          Explora lo esencial de nuestra atención médica personalizada y nuestro dedicado servicio a la comunidad.
+        </p>
+      </div>
+    </div>
     <div class="mx-auto mt-16 max-w-2xl sm:mt-10 lg:mt-16 lg:max-w-none">
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-20 lg:max-w-none lg:grid-cols-3">
         <div class="col-span-1 flex flex-col space-y-10">

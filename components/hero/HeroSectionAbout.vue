@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { IconGynecology, IconHeartPlus } from "#components";
-
 const primaryFeatures = [
   {
     name: "Nuevo Servicio de Ginecología",
@@ -16,6 +14,20 @@ const primaryFeatures = [
 </script>
 <template>
   <div class="bg-transparent mt-1.5">
+    <div class="grid grid-cols-2">
+      <div>
+        <span class="text-[#099541]/45 font-maven uppercase">Sobre Nosotros</span>
+        <h2 class="text-tropaz-blue py-2 tracking-wide font-maven text-3xl font-medium leading-7">
+          De Qué se Encarga Nuestra Clínica?
+        </h2>
+      </div>
+      <div>
+        <p class="font-montserrat text-stratos-blue leading-7 font-normal text-[16px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+    </div>
     <div class="relative mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-4 lg:py-20">
       <div class="px-6 lg:px-0 lg:pt-0">
         <iframe

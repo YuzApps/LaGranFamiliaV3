@@ -32,4 +32,10 @@ export default defineNuxtConfig({
       title: "Inicio",
     },
   },
+
+  runtimeConfig: {
+    public: {
+      youtubeUrl: "https://www.youtube.com/watch?v=6JYIGclVQdw",
+    },
+  },
 });

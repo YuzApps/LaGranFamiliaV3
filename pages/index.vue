@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import HeroSectionAbout from "~/components/hero/HeroSectionAbout.vue";
+
 useSeoMeta({
   title: "My Amazing Site",
   ogTitle: "My Amazing Site",
@@ -12,7 +14,7 @@ useSeoMeta({
 <template>
   <div>
     <HeroSection />
-    <HeroSectionQuote />
+    <HeroSectionAbout />
     <HeroSectionFeature />
     <HeroSectionQuoteImage />
   </div>
