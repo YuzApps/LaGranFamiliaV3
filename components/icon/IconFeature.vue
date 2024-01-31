@@ -8,6 +8,11 @@ const props = defineProps({
     type: String,
     default: "md",
   },
+
+  containerClass: {
+    type: String,
+    default: "w-8 h-8",
+  },
 });
 
 const sizeClasses = computed(() => {
@@ -16,7 +21,12 @@ const sizeClasses = computed(() => {
     md: "w-8 h-8",
     lg: "w-10 h-10",
     xl: "w-12 h-12",
+    "2xl": "w-14 h-14",
   }[props.size];
+});
+
+const containerClasses = computed(() => {
+  return props.containerClass;
 });
 </script>
 
@@ -26,7 +36,7 @@ const sizeClasses = computed(() => {
       class="hover:animate-pulse rounded-full bg-[#EEF2FF] w-10 h-10 flex items-center content-center justify-center"
       :class="sizeClasses"
     >
-      <div class="flex items-center justify-center rounded-full bg-[#D8DFF3] w-8 h-8">
+      <div class="flex items-center justify-center rounded-full bg-[#D8DFF3]" :class="containerClasses">
         <slot name="icon"></slot>
       </div>
     </div>

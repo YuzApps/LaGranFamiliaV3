@@ -44,7 +44,7 @@ const primaryFeatures = [
                   <template v-slot:icon>
                     <NuxtImg
                       :src="feature.icon === 'IconGynecology' ? '/img/uterus.png' : '/img/health-care.png'"
-                      class="w-5 h-5 text-tropaz-blue"
+                      class="w-5 h-5"
                     />
                   </template>
                 </IconFeature>

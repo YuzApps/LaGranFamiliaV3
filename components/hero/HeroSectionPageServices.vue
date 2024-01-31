@@ -89,17 +89,24 @@ import { serviceCollection } from "~/data/dataSeeder";
         class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-10 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-3"
       >
         <div
-          v-for="tier in serviceCollection"
-          :key="tier.id"
+          v-for="service in serviceCollection"
+          :key="service.id"
           class="drop-shadow-[0_10px_10px_rgba(71,84,170,0.25)] bg-white rounded-3xl p-8"
           :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']"
         >
+          <div class="text-center -mt-1.5 mb-5">
+            <IconFeature size="2xl" container-class="size-10">
+              <template v-slot:icon>
+                <NuxtImg :src="service.icon" class="size-8" />
+              </template>
+            </IconFeature>
+          </div>
           <h2 :id="useId" class="font-maven text-tropaz-blue font-semibold text-center capitalize">
-            {{ tier.name }}
+            {{ service.name }}
           </h2>
 
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-            <li v-for="feature in tier.items" :key="feature" class="flex gap-x-3 font-montserrat text-sm">
+            <li v-for="feature in service.items" :key="feature" class="flex gap-x-3 font-montserrat text-sm">
               <div class="rounded-full bg-[#D8DFF3] size-7 flex flex-shrink-0 items-center justify-center">
                 <UIcon name="i-heroicons-check" class="h-5 w-5 flex-none text-[#4754AA]" aria-hidden="true" />
               </div>
