@@ -36,6 +36,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       youtubeUrl: "https://www.youtube.com/watch?v=6JYIGclVQdw",
+      facebookUrl: "https://www.facebook.com/clinicalagranfamilia",
+      instagramUrl: "https://www.instagram.com/lagranfamilia19",
+      twitterUrl: "https://twitter.com/GeneralClinica",
+      youtubeChannel: "https://www.youtube.com/channel/UCiI3uDj1EH6I3GWKd2BKJ4g",
     },
   },
 });
