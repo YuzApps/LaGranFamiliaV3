@@ -47,6 +47,12 @@ export default defineNuxtConfig({
         "upgrade-insecure-requests": true,
       },
     },
+    csrf: {
+      cookie: {
+        secure: true,
+        sameSite: "Strict",
+      },
+    },
     csp: {
       reportOnly: false,
       hashAlgorithm: "sha256",
