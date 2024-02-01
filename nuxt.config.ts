@@ -41,6 +41,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      googleMapsApiKey: "",
       youtubeUrl: "https://www.youtube.com/watch?v=6JYIGclVQdw",
       facebookUrl: "https://www.facebook.com/clinicalagranfamilia",
       instagramUrl: "https://www.instagram.com/lagranfamilia19",

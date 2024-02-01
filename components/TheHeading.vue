@@ -38,17 +38,22 @@ const mobileMenuOpen = ref(false);
         >
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a
-          href="#"
-          class="text-base bg-curious-blue font-normal font-montserrat tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150"
+        <NuxtLink
+          to="/contact"
+          class="contact-link text-base bg-curious-blue font-normal font-montserrat tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150"
           >Contacto
-        </a>
+        </NuxtLink>
       </div>
     </nav>
   </header>
 </template>
 
 <style lang="scss">
+.contact-link {
+  &.router-link-exact-active {
+    @apply border-b-0 text-white #{!important};
+  }
+}
 .logo {
   &.router-link-exact-active {
     @apply border-b-0 #{!important};
