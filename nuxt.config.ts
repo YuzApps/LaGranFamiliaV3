@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     csrf: {
       cookie: {
         secure: true,
-        sameSite: "Strict",
+        sameSite: "none",
       },
     },
     csp: {
