@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         "manifest-src": ["'self'"],
         "media-src": ["'self'", "https:", "http:"],
         "object-src": ["'none'"],
-        "script-src": ["'self'", "'unsafe-inline'", "'wasm-unsafe-eval'"],
+        "script-src": ["'self'", "'unsafe-inline'", "'wasm-unsafe-eval'", "'script-src-elem'"],
         "script-src-attr": ["'none'"],
         "style-src": ["'self'", "'unsafe-inline'"],
         "upgrade-insecure-requests": true,
@@ -41,6 +41,7 @@ export default defineNuxtConfig({
     },
     csp: {
       reportOnly: false,
+      hashAlgorithm: "sha256",
       policies: {
         "script-src": ["'self'", "'unsafe-inline'", "*.youtube.com", "*.google.com", "*.googleapis.com"],
       },
