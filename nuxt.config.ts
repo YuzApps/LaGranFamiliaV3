@@ -49,4 +49,8 @@ export default defineNuxtConfig({
       youtubeChannel: "https://www.youtube.com/channel/UCiI3uDj1EH6I3GWKd2BKJ4g",
     },
   },
+
+  build: {
+    transpile: ["@googlemaps/js-api-loader"],
+  },
 });

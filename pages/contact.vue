@@ -16,8 +16,9 @@ const loader = new Loader({
 });
 
 onMounted(async () => {
-  await loader.load();
-  useGeoPosition();
+  loader.load().then(() => {
+    useGeoPosition();
+  });
 });
 
 function useGeoPosition() {
