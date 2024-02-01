@@ -39,6 +39,12 @@ export default defineNuxtConfig({
         "upgrade-insecure-requests": true,
       },
     },
+    csp: {
+      reportOnly: false,
+      policies: {
+        "script-src": ["'self'", "'unsafe-inline'", "*.youtube.com", "*.google.com"],
+      },
+    },
     rateLimiter: false,
   },
 
