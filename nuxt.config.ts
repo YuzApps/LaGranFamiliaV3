@@ -50,11 +50,11 @@ export default defineNuxtConfig({
     csrf: {
       cookie: {
         secure: true,
-        sameSite: "lax",
+        sameSite: "strict",
       },
     },
     csp: {
-      reportOnly: false,
+      reportOnly: true,
       hashAlgorithm: "sha256",
       policies: {
         "script-src": ["'self'", "'unsafe-inline'", "*.youtube.com", "*.google.com", "*.googleapis.com"],

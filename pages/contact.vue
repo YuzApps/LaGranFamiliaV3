@@ -3,6 +3,17 @@ import { Loader } from "@googlemaps/js-api-loader";
 
 const config = useRuntimeConfig();
 
+useSeoMeta({
+  title: "Contacto",
+  ogTitle: "Contacto",
+  description:
+    "Póngase en contacto con nosotros para obtener más información sobre nuestras consultas médicas, evaluaciones y más.",
+  ogDescription:
+    "Póngase en contacto con nosotros para obtener más información sobre nuestras consultas médicas, evaluaciones y más.",
+  ogImage: "https://example.com/image.png",
+  twitterCard: "summary_large_image",
+});
+
 const mapDiv = ref(null);
 const currPosition = ref({
   lat: 32.879699,
