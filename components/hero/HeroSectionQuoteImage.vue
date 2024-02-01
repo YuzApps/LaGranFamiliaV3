@@ -42,11 +42,7 @@
             </p>
           </blockquote>
           <figcaption class="mt-10">
-            <img
-              class="mx-auto h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
+            <img class="mx-auto h-10 w-10 rounded-full" src="/img/judith-black.png" alt="" />
             <div class="mt-4 flex items-center justify-center space-x-3 text-base">
               <div class="font-medium font-montserrat text-white">Judith Black</div>
               <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">

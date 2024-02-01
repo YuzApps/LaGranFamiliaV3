@@ -9,8 +9,6 @@ const currPosition = ref({
   lng: -96.666299,
 });
 
-console.log(config.public);
-
 const loader = new Loader({
   apiKey: config.public.googleMapsApiKey,
 });

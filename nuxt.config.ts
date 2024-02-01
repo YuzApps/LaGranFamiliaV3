@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import { isDevelopment, isWindows } from "std-env";
+
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+    ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
+  ],
 
   devtools: {
     enabled: true,
@@ -8,6 +16,30 @@ export default defineNuxtConfig({
     timeline: {
       enabled: true,
     },
+  },
+
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: {
+        "default-src": ["'self'"],
+        "base-uri": ["'self'"],
+        "connect-src": ["'self'", "https:", "http:", "wss:", "ws:"],
+        "font-src": ["'self'"],
+        "form-action": ["'none'"],
+        "frame-ancestors": ["'none'"],
+        "frame-src": ["https:"],
+        "img-src": ["'self'", "https:", "http:", "data:", "blob:"],
+        "manifest-src": ["'self'"],
+        "media-src": ["'self'", "https:", "http:"],
+        "object-src": ["'none'"],
+        "script-src": ["'self'", "'unsafe-inline'", "'wasm-unsafe-eval'"],
+        "script-src-attr": ["'none'"],
+        "style-src": ["'self'", "'unsafe-inline'"],
+        "upgrade-insecure-requests": true,
+      },
+    },
+    rateLimiter: false,
   },
 
   colorMode: {
@@ -37,6 +69,7 @@ export default defineNuxtConfig({
       titleTemplate: "%s - Clinica la Gran Familia",
       title: "Inicio",
     },
+    pageTransition: { name: "page", mode: "out-in" },
   },
 
   runtimeConfig: {
