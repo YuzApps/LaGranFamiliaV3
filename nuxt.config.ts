@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         "default-src": ["'self'"],
         "base-uri": ["'self'"],
         "connect-src": ["'self'", "https:", "http:", "wss:", "ws:"],
-        "font-src": ["'self'"],
+        "font-src": ["'self'", "*.gstatic.com", "*.googleapis.com"],
         "form-action": ["'none'"],
         "frame-ancestors": ["'none'"],
         "frame-src": ["https:"],
