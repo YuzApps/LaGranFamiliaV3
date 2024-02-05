@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { useGeolocation } from "~/composables/useGeolocation";
+import type { Ref } from "vue";
 
-const mapDiv = ref(null);
+const mapDiv: Ref<HTMLElement | null> = ref(null);
 
 useSeoMeta({
   title: "Contacto",
