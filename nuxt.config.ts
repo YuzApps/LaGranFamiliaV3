@@ -4,9 +4,11 @@ import { isDevelopment, isWindows } from "std-env";
 
 export default defineNuxtConfig({
   modules: [
+    "@nuxt/content",
     "@nuxt/ui",
     "@nuxt/image",
     "@nuxtjs/google-fonts",
+    "nuxt-og-image",
     ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
   ],
 

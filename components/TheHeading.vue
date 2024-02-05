@@ -1,17 +1,11 @@
 <script setup>
-const navigation = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "/services" },
-  { name: "Galería", href: "/gallery" },
-  { name: "Citas", href: "/appointment" },
-];
-
+const { header } = useAppConfig();
 const mobileMenuOpen = ref(false);
 </script>
 
 <template>
   <header class="bg-white font-montserrat shadow-md z-10">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="mx-auto flex max-w-7xl sm:max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <NuxtLink href="/" class="logo -m-1.5 p-1.5">
           <span class="sr-only">La Gran Familia</span>
@@ -25,31 +19,29 @@ const mobileMenuOpen = ref(false);
           @click="mobileMenuOpen = true"
         >
           <span class="sr-only">Open main menu</span>
-          <!--Bars3Icon class="h-6 w-6" aria-hidden="true" /-->
+          <UIcon name="i-heroicons-bars-3-solid" class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <NuxtLink
-          v-for="item in navigation"
-          :key="item.name"
-          :to="item.href"
-          class="text-sm font-normal tracking-wide leading-6 text-gray-900"
-          >{{ item.name }}</NuxtLink
-        >
+        <NuxtLink v-for="item in header.links" :key="item.name" :to="item.href" class="router-link">{{
+          item.name
+        }}</NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <NuxtLink
-          to="/contact"
-          class="contact-link text-base bg-curious-blue font-normal font-montserrat tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150"
-          >Contacto
-        </NuxtLink>
+        <NuxtLink to="/contact" class="contact-link">Contacto</NuxtLink>
       </div>
     </nav>
   </header>
 </template>
 
 <style lang="scss">
+.router-link {
+  @apply text-[18px] font-normal tracking-wide leading-6 text-gray-900;
+}
+
 .contact-link {
+  @apply text-base bg-curious-blue font-normal font-montserrat tracking-wide text-white rounded-full px-4 py-1.5 hover:bg-bahama-blue hover:shadow-md transition ease-in-out duration-150;
+
   &.router-link-exact-active {
     @apply border-b-0 text-white #{!important};
   }
