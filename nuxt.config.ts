@@ -16,6 +16,11 @@ export default defineNuxtConfig({
     domains: ["portal.clinicalagranfamilia.com", "clinicalagranfamilia.com", "res.cloudinary.com"],
   },
 
+  experimental: {
+    sharedPrerenderData: true,
+    payloadExtraction: true,
+  },
+
   devtools: {
     enabled: true,
 
