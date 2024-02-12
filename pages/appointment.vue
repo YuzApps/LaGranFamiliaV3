@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+useSeoMeta({
+  title: "Citas",
+  ogTitle: "Agenda tu cita en Clínica General La Gran Familia.",
+  description: "Agenda tu cita en Clínica General La Gran Familia.",
+  ogDescription: "Reserva tu cita online para cualquier servicio dental en Dallas. Fácil, rápido y seguro.",
+  ogImage: "https://example.com/image.png",
+  twitterCard: "summary_large_image",
+});
+
 const inputUI = {
   rounded: "rounded-md",
   placeholder: "placeholder-gray-400 dark:placeholder-gray-500 text-sm",
