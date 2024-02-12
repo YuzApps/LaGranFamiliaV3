@@ -63,7 +63,14 @@ export default defineNuxtConfig({
       reportOnly: true,
       hashAlgorithm: "sha256",
       policies: {
-        "script-src": ["'self'", "'unsafe-inline'", "*.youtube.com", "*.google.com", "*.googleapis.com"],
+        "script-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-hashes'",
+          "*.youtube.com",
+          "*.google.com",
+          "*.googleapis.com",
+        ],
       },
     },
     rateLimiter: false,
