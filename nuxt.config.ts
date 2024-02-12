@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
   ],
 
+  image: {
+    dir: "assets",
+  },
+
   devtools: {
     enabled: true,
 

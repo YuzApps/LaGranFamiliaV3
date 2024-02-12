@@ -42,7 +42,7 @@
             </p>
           </blockquote>
           <figcaption class="mt-10">
-            <img class="mx-auto h-10 w-10 rounded-full" src="/img/judith-black.png" alt="" />
+            <NuxtImg class="mx-auto h-10 w-10 rounded-full" src="/img/judith-black.png" alt="" />
             <div class="mt-4 flex items-center justify-center space-x-3 text-base">
               <div class="font-medium font-montserrat text-white">Judith Black</div>
               <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
