@@ -4,7 +4,7 @@ const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-  <header class="bg-white font-montserrat shadow-md z-20 pointer-events-none">
+  <header class="bg-white font-montserrat shadow-md z-20">
     <nav class="mx-auto flex max-w-7xl sm:max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <NuxtLink href="/" class="logo -m-1.5 p-1.5">
