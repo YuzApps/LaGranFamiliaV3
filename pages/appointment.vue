@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useSeoMeta({
-  title: "Agenda tu cita",
+  title: "Agenda tu cita en Dallas",
   ogTitle: "Agenda tu cita en Clínica General La Gran Familia.",
   description: "Agenda tu cita en Clínica General La Gran Familia.",
   ogDescription: "Reserva tu cita online para cualquier servicio dental en Dallas. Fácil, rápido y seguro.",
