@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 export const serviceCollection = [
   {
     id: nanoid(),
-    icon: "/img/disease.png",
+    icon: "/assets/img/disease.png",
     name: "Control de Enfermedades agudas y crònicas",
     items: [
       { name: "COVID-19 y Post COVID-19" },
@@ -40,7 +40,7 @@ export const serviceCollection = [
   },
   {
     id: nanoid(),
-    icon: "/img/microscope.png",
+    icon: "/assets/img/microscope.png",
     name: "Laboratorios y Otros Test",
     items: [
       { name: "Examen de Glucosa" },
@@ -70,7 +70,7 @@ export const serviceCollection = [
   },
   {
     id: nanoid(),
-    icon: "/img/call.png",
+    icon: "/assets/img/call.png",
     name: "Emergencias menores y otros servicios",
     items: [
       { name: "Lavados de oídos." },

@@ -43,7 +43,9 @@ const primaryFeatures = [
                 <IconFeature size="xl">
                   <template v-slot:icon>
                     <NuxtImg
-                      :src="feature.icon === 'IconGynecology' ? '/img/uterus.png' : '/img/health-care.png'"
+                      :src="
+                        feature.icon === 'IconGynecology' ? '/assets/img/uterus.png' : '/assets/img/health-care.png'
+                      "
                       class="w-5 h-5"
                     />
                   </template>
@@ -58,7 +60,7 @@ const primaryFeatures = [
         </dl>
       </div>
       <div class="absolute inset-y-0 -z-10">
-        <NuxtImg src="/img/Blob.png" alt="Hero Quote" class="w-full h-full" />
+        <NuxtImg src="/assets/img/Blob.png" alt="Hero Quote" class="w-full h-full" />
       </div>
     </div>
   </div>

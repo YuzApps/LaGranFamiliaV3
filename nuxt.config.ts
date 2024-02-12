@@ -14,7 +14,6 @@ export default defineNuxtConfig({
 
   image: {
     domains: ["portal.clinicalagranfamilia.com", "clinicalagranfamilia.com", "res.cloudinary.com"],
-    dir: "assets",
   },
 
   devtools: {

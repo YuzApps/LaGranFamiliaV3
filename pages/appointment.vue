@@ -7,7 +7,7 @@ import required from "ajv/lib/vocabularies/validation/required.js";
     <div class="lg:absolute lg:inset-0 lg:left-1/2">
       <NuxtImg
         class="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
-        src="/img/Section.png"
+        src="/assets/img/Section.png"
         alt=""
       />
     </div>

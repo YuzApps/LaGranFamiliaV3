@@ -78,7 +78,7 @@ const navigation = {
           </div>
         </nav>
         <div>
-          <NuxtImg src="/img/LogoFooter.png" alt="Logo" class="h-[100px] w-auto mx-auto" />
+          <NuxtImg src="/assets/img/LogoFooter.png" alt="Logo" class="h-[100px] w-auto mx-auto" />
         </div>
       </div>
     </UContainer>

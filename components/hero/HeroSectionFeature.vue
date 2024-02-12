@@ -62,7 +62,7 @@ const primaryFeatures = [
           </div>
         </div>
         <div>
-          <NuxtImg src="/svg/TV_M213_04_1.svg" alt="TV" class="mx-auto h-full w-auto" />
+          <NuxtImg src="/assets/svg/TV_M213_04_1.svg" alt="TV" class="mx-auto h-full w-auto" />
         </div>
         <div class="col-span-1 flex flex-col space-y-10">
           <div v-for="feature in primaryFeatures.slice(2, 4)" :key="feature.name" class="flex flex-col text-center">

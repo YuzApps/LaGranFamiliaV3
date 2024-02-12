@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="mt-20 sm:mt-24 text-center md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-          <NuxtImg src="/svg/hero.svg" alt="Hero" class="mx-auto h-full w-auto" />
+          <NuxtImg src="/assets/svg/hero.svg" alt="Hero" class="mx-auto h-full w-auto" />
         </div>
       </div>
       <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />

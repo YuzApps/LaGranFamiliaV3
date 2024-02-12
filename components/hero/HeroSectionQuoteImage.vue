@@ -3,7 +3,7 @@
 <template>
   <div class="relative isolate overflow-hidden pt-10">
     <NuxtImg
-      src="/banner/anton-8q-U8X1zkvI-unsplash.jpg"
+      src="/assets/banner/anton-8q-U8X1zkvI-unsplash.jpg"
       alt=""
       class="absolute inset-0 -z-10 h-full w-full object-cover"
     />
@@ -42,7 +42,7 @@
             </p>
           </blockquote>
           <figcaption class="mt-10">
-            <NuxtImg class="mx-auto h-10 w-10 rounded-full" src="/img/judith-black.png" alt="" />
+            <NuxtImg class="mx-auto h-10 w-10 rounded-full" src="/assets/img/judith-black.png" alt="" />
             <div class="mt-4 flex items-center justify-center space-x-3 text-base">
               <div class="font-medium font-montserrat text-white">Judith Black</div>
               <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">

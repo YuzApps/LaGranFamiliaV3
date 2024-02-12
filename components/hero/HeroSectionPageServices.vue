@@ -4,7 +4,11 @@ import { serviceCollection } from "~/data/dataSeeder";
 <template>
   <div>
     <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-      <NuxtImg src="/banner/hero-services.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <NuxtImg
+        src="/assets/banner/hero-services.png"
+        alt=""
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
       <div
         class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"

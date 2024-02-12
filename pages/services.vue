@@ -49,7 +49,7 @@ useSeoMeta({
           <div class="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
             <NuxtImg
               class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-              src="/banner/portrait-of-group.png"
+              src="/assets/banner/portrait-of-group.png"
               alt="Llamanos para más información"
             />
           </div>
