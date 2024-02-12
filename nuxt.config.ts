@@ -48,7 +48,7 @@ export default defineNuxtConfig({
           "*.google.com",
           "*.googleapis.com",
         ],
-        "script-src-attr": ["'none'"],
+        "script-src-attr": ["'none'", "'unsafe-inline'"],
         "style-src": ["'self'", "'unsafe-inline'", "*.googleapis.com", "*.gstatic.com"],
         "upgrade-insecure-requests": true,
       },
