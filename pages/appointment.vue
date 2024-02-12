@@ -88,7 +88,7 @@ const inputUI = {
             <div class="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
               <button
                 type="submit"
-                class="w-full rounded-full bg-[#0B9444] hover:shadow-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#107C3D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                class="w-full rounded-full bg-[#0B9444] hover:shadow-md px-3.5 py-2.5 text-center text-lg font-montserrat font-semibold text-white shadow-sm hover:bg-[#107C3D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Reserva ahora
               </button>
