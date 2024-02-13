@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+useSeoMeta({
+  ogType: "website",
+});
 </script>
 
 <template>
