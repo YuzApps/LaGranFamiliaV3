@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/google-fonts",
     "nuxt-og-image",
+    "@vue-email/nuxt",
     ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
   ],
 
@@ -124,6 +125,6 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ["@googlemaps/js-api-loader"],
+    transpile: ["@googlemaps/js-api-loader", "vue-email"],
   },
 });
