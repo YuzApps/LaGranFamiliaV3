@@ -15,6 +15,9 @@ export default defineNuxtConfig({
 
   image: {
     domains: ["portal.clinicalagranfamilia.com", "clinicalagranfamilia.com", "res.cloudinary.com"],
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/assetss/image/upload/",
+    },
   },
 
   experimental: {
