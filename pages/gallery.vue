@@ -20,16 +20,30 @@ useSeoMeta({
       </div>
       <div class="grid grid-cols-2 gap-6">
         <div class="px-6 lg:px-0 lg:pt-8">
-          <iframe
-            src="https://www.youtube.com/embed/f6K-321wef4"
-            class="w-full aspect-video rounded-lg shadow-lg"
-          ></iframe>
+          <div>
+            <iframe
+              src="https://www.youtube.com/embed/f6K-321wef4"
+              class="w-full aspect-video rounded-lg shadow-lg"
+            ></iframe>
+            <div>
+              <h3 class="title-video">Vacunación contra el COVID-19</h3>
+              <p class="mt-2 text-base leading-7 text-gray-600 font-montserrat">
+                Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
+              </p>
+            </div>
+          </div>
         </div>
         <div class="px-6 lg:px-0 lg:pt-8">
           <iframe
             src="https://www.youtube.com/embed/v5O2md6KC9Q"
             class="w-full aspect-video rounded-lg shadow-lg"
           ></iframe>
+          <div>
+            <h3 class="title-video">Protégete contra la Influeza</h3>
+            <p class="mt-2 text-base leading-7 text-gray-600 font-montserrat">
+              Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
+            </p>
+          </div>
         </div>
       </div>
     </UContainer>
@@ -98,4 +112,8 @@ useSeoMeta({
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.title-video {
+  @apply mt-4 text-lg font-semibold font-maven text-tropaz-blue tracking-tight sm:text-[20px];
+}
+</style>
