@@ -77,19 +77,19 @@ useSeoMeta({
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/unsplash_XtUd5SiX464.png"
-              class="col-span-2 w-full rounded shadow-lg"
+              class="col-span-2 w-full rounded shadow-lg img-gallery-effect"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/unsplash_pxoZSTdAzeU.png"
-              class="w-full col-span-1 rounded shadow-lg"
+              class="w-full col-span-1 rounded shadow-lg img-gallery-effect"
               height="169"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/unsplash_d2zvqp3fpro.png"
               height="269"
-              class="w-full rounded shadow-lg"
+              class="w-full rounded shadow-lg img-gallery-effect"
             />
           </div>
         </div>
@@ -98,28 +98,28 @@ useSeoMeta({
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/e1b20qxblgud2bu3gm7y.png"
-              class="col-span-1 w-full rounded shadow-lg"
+              class="col-span-1 w-full rounded shadow-lg img-gallery-effect"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/pv5rcpo156s164gkjg1j.png"
-              class="w-full col-span-1 rounded shadow-lg"
+              class="w-full col-span-1 rounded shadow-lg img-gallery-effect"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/unsplash_9IcKPSQ9G5Q.png"
               height="269"
-              class="w-full col-span-2 rounded shadow-lg"
+              class="w-full col-span-2 rounded shadow-lg img-gallery-effect"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/ub1yzpc0apr7zeny5ziv.png"
-              class="w-full col-span-1 rounded shadow-lg"
+              class="w-full col-span-1 rounded shadow-lg img-gallery-effect"
             />
             <NuxtImg
               provider="cloudinary"
               src="/LaGranFamilia/img/vsj6pkyppyidog37ejfw.png"
-              class="w-full col-span-1 rounded shadow-lg"
+              class="w-full col-span-1 rounded shadow-lg img-gallery-effect"
             />
           </div>
         </div>
@@ -131,5 +131,8 @@ useSeoMeta({
 <style scoped lang="scss">
 .title-video {
   @apply mt-4 text-lg font-semibold font-maven text-tropaz-blue tracking-tight sm:text-[20px];
+}
+.img-gallery-effect {
+  @apply hover:scale-105 transition duration-500 cursor-pointer object-cover;
 }
 </style>
