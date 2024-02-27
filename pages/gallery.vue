@@ -14,11 +14,11 @@ useSeoMeta({
     <UContainer class="pt-10 pb-5">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="text-base font-semibold leading-7 text-[#099541]/45 uppercase font-maven">Galería</h1>
-        <h2 class="mt-2 text-3xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-5xl">
+        <h2 class="mt-2 text-3xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-4xl">
           Vídeos importantes
         </h2>
       </div>
-      <div class="grid grid-cols-2 gap-10">
+      <div class="grid grid-cols-2 gap-6">
         <div class="px-6 lg:px-0 lg:pt-8">
           <iframe
             src="https://www.youtube.com/embed/f6K-321wef4"
@@ -37,7 +37,7 @@ useSeoMeta({
     <UContainer>
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="text-base font-semibold leading-7 text-[#099541]/45 uppercase font-maven">Galería</h2>
-        <h3 class="mt-2 text-2xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-5xl">
+        <h3 class="mt-2 text-xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-4xl">
           Nuestro Centro Médico
         </h3>
       </div>
