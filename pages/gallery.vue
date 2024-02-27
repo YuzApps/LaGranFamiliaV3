@@ -20,12 +20,19 @@ useSeoMeta({
       </div>
       <div class="grid grid-cols-2 gap-6">
         <div class="px-6 lg:px-0 lg:pt-8">
-          <div>
-            <iframe
-              src="https://www.youtube.com/embed/f6K-321wef4"
-              class="w-full aspect-video rounded-lg shadow-lg"
-            ></iframe>
-            <div>
+          <iframe
+            src="https://www.youtube.com/embed/f6K-321wef4"
+            class="w-full aspect-video rounded-lg shadow-lg"
+          ></iframe>
+          <div class="flex space-x-2 mt-2">
+            <div class="py-2">
+              <IconFeature size="xl">
+                <template v-slot:icon>
+                  <NuxtImg src="/assets/img/uterus1.png" class="w-5 h-5" />
+                </template>
+              </IconFeature>
+            </div>
+            <div class="flex flex-col">
               <h3 class="title-video">Vacunación contra el COVID-19</h3>
               <p class="mt-2 text-base leading-7 text-gray-600 font-montserrat">
                 Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
@@ -38,11 +45,20 @@ useSeoMeta({
             src="https://www.youtube.com/embed/v5O2md6KC9Q"
             class="w-full aspect-video rounded-lg shadow-lg"
           ></iframe>
-          <div>
-            <h3 class="title-video">Protégete contra la Influeza</h3>
-            <p class="mt-2 text-base leading-7 text-gray-600 font-montserrat">
-              Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
-            </p>
+          <div class="flex space-x-2 mt-2">
+            <div class="py-2">
+              <IconFeature size="xl">
+                <template v-slot:icon>
+                  <NuxtImg src="/assets/img/disease1.png" class="w-5 h-5" />
+                </template>
+              </IconFeature>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="title-video">Protégete contra la Influeza</h3>
+              <p class="mt-2 text-base leading-7 text-gray-600 font-montserrat">
+                Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
+              </p>
+            </div>
           </div>
         </div>
       </div>
