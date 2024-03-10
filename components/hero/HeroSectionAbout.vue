@@ -11,6 +11,10 @@ const primaryFeatures = [
     icon: "IconHeartPlus",
   },
 ];
+
+const urlPlayer = ref(
+  "https://player.cloudinary.com/embed/?public_id=LaGranFamilia%2Fvideos%2Fvideo_source_11&cloud_name=assetss&player[posterOptions][transformation][startOffset]=14",
+);
 </script>
 <template>
   <div class="bg-transparent mt-1.5">
@@ -31,7 +35,7 @@ const primaryFeatures = [
     <div class="relative mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-4 lg:py-20">
       <div class="px-6 lg:px-0 lg:pt-0 shadow-md">
         <iframe
-          src="https://player.cloudinary.com/embed/?public_id=LaGranFamilia%2Fvideos%2Fvideo_source_11&cloud_name=assetss"
+          :src="urlPlayer"
           allow="autoplay; encrypted-media; picture-in-picture"
           allowfullscreen
           class="w-full aspect-video rounded-sm"
