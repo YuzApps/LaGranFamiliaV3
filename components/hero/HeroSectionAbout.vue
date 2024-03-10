@@ -29,10 +29,12 @@ const primaryFeatures = [
       </div>
     </div>
     <div class="relative mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-4 lg:py-20">
-      <div class="px-6 lg:px-0 lg:pt-0">
+      <div class="px-6 lg:px-0 lg:pt-0 shadow-md">
         <iframe
-          src="https://res.cloudinary.com/assetss/video/upload/v1709912380/LaGranFamilia/videos/video_source_11.mp4"
-          class="w-full aspect-video rounded-lg shadow-lg"
+          src="https://player.cloudinary.com/embed/?public_id=LaGranFamilia%2Fvideos%2Fvideo_source_11&cloud_name=assetss"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          class="w-full aspect-video rounded-sm"
         ></iframe>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-2 lg:max-w-4xl">
