@@ -78,7 +78,7 @@ const primaryFeatures = [
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
                 <IconFeature size="xl">
                   <template v-slot:icon>
-                    <NuxtImg :src="`/svg/${feature.icon}`" class="w-6 h-6" />
+                    <NuxtImg :src="`/assets/svg/${feature.icon}`" class="w-6 h-6" />
                   </template>
                 </IconFeature>
               </div>

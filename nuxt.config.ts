@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 import { isDevelopment, isWindows } from "std-env";
 
 export default defineNuxtConfig({
@@ -13,16 +12,16 @@ export default defineNuxtConfig({
     ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
   ],
 
+  experimental: {
+    sharedPrerenderData: true,
+    payloadExtraction: true,
+  },
+
   image: {
     domains: ["portal.clinicalagranfamilia.com", "clinicalagranfamilia.com", "res.cloudinary.com"],
     cloudinary: {
       baseURL: "https://res.cloudinary.com/assetss/image/upload/",
     },
-  },
-
-  experimental: {
-    sharedPrerenderData: true,
-    payloadExtraction: true,
   },
 
   devtools: {
