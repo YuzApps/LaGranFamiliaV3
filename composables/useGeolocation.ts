@@ -1,5 +1,5 @@
-import { Loader } from "@googlemaps/js-api-loader";
 import { useId } from "#app";
+import { Loader } from "@googlemaps/js-api-loader";
 
 export const useGeolocation = (mapDiv: any) => {
   const config = useRuntimeConfig();
@@ -20,7 +20,6 @@ export const useGeolocation = (mapDiv: any) => {
     disableDefaultUI: true,
     mapTypeId: "satellite",
     title: "Clínica general La Gran Familia",
-    key: config.public.googleMapsApiKey,
   };
 
   const loader = new Loader({
@@ -59,8 +58,7 @@ export const useGeolocation = (mapDiv: any) => {
       title: `Clinica general La Gran Familia`,
     });
 
-    // @ts-ignore
-    marker.addListener("click", ({ domEvent, latLng }) => {
+    marker.addListener("click", ({ domEvent }: any) => {
       const { target } = domEvent;
       infoWindow.close();
       infoWindow.setContent(marker.title);
