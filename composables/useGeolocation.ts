@@ -1,12 +1,16 @@
 import { Loader } from "@googlemaps/js-api-loader";
+import { useId } from "#app";
 
 export const useGeolocation = (mapDiv: any) => {
+  const config = useRuntimeConfig();
+
   const position = {
-    lat: 32.8800811,
+    lat: 32.8798453, // 32.8801069,-96.6665119
     lng: -96.6665119,
   };
 
   const mapOptions = {
+    mapId: useId(),
     center: { lat: 32.88001, lng: -96.6674 },
     zoom: 17,
     zoomControl: true,
@@ -16,39 +20,29 @@ export const useGeolocation = (mapDiv: any) => {
     disableDefaultUI: true,
     mapTypeId: "satellite",
     title: "Clínica general La Gran Familia",
+    key: config.public.googleMapsApiKey,
   };
 
   const loader = new Loader({
-    apiKey: useRuntimeConfig().public.googleMapsApiKey,
+    apiKey: config.public.googleMapsApiKey,
     version: "weekly",
+    libraries: ["places"],
   });
 
-  onMounted(async () => {
-    loader.load().then((google) => {
-      console.log("Google Maps API Loaded", google);
-      useGeoPosition(google);
-    });
-  });
+  onMounted(async () => await useGeoPosition());
 
-  async function useGeoPosition(google: any): Promise<void> {
-    //@ts-ignore
-    const { Map } = (await google.maps.importLibrary("maps")) as google.maps.MapsLibrary;
-    //@ts-ignore
-    const { AdvancedMarkerView } = (await google.maps.importLibrary("marker")) as google.maps.MarkerLibrary;
-    //@ts-ignore
-    const { Point } = (await google.maps.importLibrary("core")) as google.maps.CoreLibrary;
+  async function useGeoPosition(): Promise<void> {
+    const { Map } = (await loader.importLibrary("maps")) as google.maps.MapsLibrary;
+    const { AdvancedMarkerElement, PinElement } = (await loader.importLibrary("marker")) as google.maps.MarkerLibrary;
 
     const map = new Map(mapDiv.value, mapOptions);
 
-    const svgMarker = {
-      path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
-      fillColor: "red",
-      fillOpacity: 0.8,
-      strokeWeight: 0,
-      rotation: 0,
-      scale: 2,
-      anchor: Point(15, 30),
-    };
+    const parser = new DOMParser();
+
+    // A marker with a custom inline SVG.
+    const pinSvgString =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500 h-10 w-10 fill-white"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+    const pinSvg = parser.parseFromString(pinSvgString, "image/svg+xml").documentElement;
 
     const contentString =
       `<strong>Clinica general La Gran Familia</strong> <br/>` + `3035 S Shiloh Rd <br/> Garland, TX 75041`;
@@ -58,21 +52,19 @@ export const useGeolocation = (mapDiv: any) => {
       ariaLabel: "Uluru",
     });
 
-    const marker = new google.maps.Marker({
+    const marker = new AdvancedMarkerElement({
       position,
       map,
-      icon: svgMarker,
-      title: "Clinica general La Gran Familia",
+      content: pinSvg,
+      title: `Clinica general La Gran Familia`,
     });
 
-    marker.setMap(map);
-
-    marker.addListener("click", () => {
-      infoWindow.open({
-        anchor: marker,
-        map,
-        shouldFocus: false,
-      });
+    // @ts-ignore
+    marker.addListener("click", ({ domEvent, latLng }) => {
+      const { target } = domEvent;
+      infoWindow.close();
+      infoWindow.setContent(marker.title);
+      infoWindow.open(marker.map, marker);
     });
   }
 };
