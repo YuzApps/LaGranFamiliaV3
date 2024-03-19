@@ -32,7 +32,9 @@ export const useGeolocation = (mapDiv: any) => {
 
   async function useGeoPosition(): Promise<void> {
     const { Map } = (await loader.importLibrary("maps")) as google.maps.MapsLibrary;
-    const { AdvancedMarkerElement, PinElement } = (await loader.importLibrary("marker")) as google.maps.MarkerLibrary;
+    const { AdvancedMarkerElement, PinElement } = (await google.maps.importLibrary(
+      "marker",
+    )) as google.maps.MarkerLibrary;
 
     const map = new Map(mapDiv.value, mapOptions);
 
