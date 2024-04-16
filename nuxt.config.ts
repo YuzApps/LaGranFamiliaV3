@@ -8,9 +8,18 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/google-fonts",
     "nuxt-og-image",
+    //...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
     "@vue-email/nuxt",
-    ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
+    "@nuxt/fonts",
+    "@nuxt/eslint",
   ],
+
+  fonts: {
+    families: [
+      { name: "Montserrat", provider: "google" },
+      { name: "Maven Pro", provider: "google" },
+    ],
+  },
 
   experimental: {
     sharedPrerenderData: true,
@@ -25,6 +34,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    "/": { prerender: true },
     "/contact": { prerender: true },
   },
 
