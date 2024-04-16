@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { serviceCollection } from "~/data/dataSeeder";
+  import { serviceCollection } from '~/data/dataSeeder';
+
+  interface Service {
+    id: number | string | undefined;
+    name: string;
+    icon: string;
+    items: { name: string | undefined }[];
+  }
+
+  const itemsCollection = computed<Service[]>(() => serviceCollection);
 </script>
 <template>
   <div>
@@ -66,53 +75,68 @@ import { serviceCollection } from "~/data/dataSeeder";
         />
       </div>
       <div class="mx-auto max-w-4xl text-center">
-        <span class="uppercase text-[16px] font-maven text-gray-600">Servicios</span>
-        <h2 class="text-[47px] font-maven font-semibold tracking-tight text-white sm:text-6xl">¿Qué Ofrecemos?</h2>
-        <p class="mt-6 text-[18px] leading-8 text-gray-300 font-montserrat">
-          Brindamos consultas médicas, exámenes, evaluaciones y tratamientos. Siempre estamos listos para satisfacer sus
-          necesidades y mejorar su salud. Si busca soluciones para sus inquietudes médicas, contáctenos hoy para
-          programar una cita. Estamos abiertos los 7 días de la semana.
+        <span class="font-maven text-[16px] uppercase text-gray-600">Servicios</span>
+        <h2 class="font-maven text-[47px] font-semibold tracking-tight text-white sm:text-6xl">
+          ¿Qué Ofrecemos?
+        </h2>
+        <p class="mt-6 font-montserrat text-[18px] leading-8 text-gray-300">
+          Brindamos consultas médicas, exámenes, evaluaciones y tratamientos. Siempre estamos listos
+          para satisfacer sus necesidades y mejorar su salud. Si busca soluciones para sus
+          inquietudes médicas, contáctenos hoy para programar una cita. Estamos abiertos los 7 días
+          de la semana.
         </p>
       </div>
     </div>
 
     <!-- Pricing section -->
-    <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-10 lg:px-8 pt-10 pb-5">
+    <div class="mx-auto mt-8 max-w-7xl px-6 pb-5 pt-10 sm:mt-10 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="text-base font-semibold leading-7 text-[#099541]/45">SERVICIOS</h1>
-        <p class="mt-2 text-4xl font-medium font-maven text-tropaz-blue tracking-tight sm:text-5xl">
+        <p class="mt-2 font-maven text-4xl font-medium tracking-tight text-tropaz-blue sm:text-5xl">
           Nuestros Servicios
         </p>
       </div>
-      <p class="mx-auto mt-6 max-w-5xl text-center font-montserrat text-lg leading-8 text-stratos-blue">
-        Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
-        loyalty, and driving sales.
+      <p
+        class="mx-auto mt-6 max-w-5xl text-center font-montserrat text-lg leading-8 text-stratos-blue"
+      >
+        Choose an affordable plan that’s packed with the best features for engaging your audience,
+        creating customer loyalty, and driving sales.
       </p>
 
       <div
         class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-10 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-3"
       >
         <div
-          v-for="service in serviceCollection"
+          v-for="service in itemsCollection"
           :key="service.id"
-          class="drop-shadow-[0_10px_10px_rgba(71,84,170,0.25)] bg-white rounded-3xl p-8"
+          class="rounded-3xl bg-white p-8 drop-shadow-[0_10px_10px_rgba(71,84,170,0.25)]"
           :class="['ring-1 ring-gray-200', 'rounded-3xl p-8']"
         >
-          <div class="text-center -mt-1.5 mb-5">
+          <div class="-mt-1.5 mb-5 text-center">
             <IconFeature size="2xl" container-class="size-10">
               <template v-slot:icon>
                 <NuxtImg :src="service.icon" class="size-8" />
               </template>
             </IconFeature>
           </div>
-          <h2 :id="useId" class="font-maven text-tropaz-blue font-semibold text-center capitalize">
+          <h2 :id="useId" class="text-center font-maven font-semibold capitalize text-tropaz-blue">
             {{ service.name }}
           </h2>
 
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-            <li v-for="feature in service.items" :key="feature" class="flex gap-x-3 font-montserrat text-sm">
-              <div class="rounded-full bg-[#D8DFF3] size-7 flex flex-shrink-0 items-center justify-center">
-                <UIcon name="i-heroicons-check" class="h-5 w-5 flex-none text-[#4754AA]" aria-hidden="true" />
+            <li
+              v-for="(feature, ftIdx) in service.items"
+              :key="ftIdx"
+              class="flex gap-x-3 font-montserrat text-sm"
+            >
+              <div
+                class="flex size-7 flex-shrink-0 items-center justify-center rounded-full bg-[#D8DFF3]"
+              >
+                <UIcon
+                  name="i-heroicons-check"
+                  class="h-5 w-5 flex-none text-[#4754AA]"
+                  aria-hidden="true"
+                />
               </div>
               {{ feature.name }}
             </li>
