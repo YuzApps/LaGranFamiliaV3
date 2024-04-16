@@ -2,5 +2,15 @@
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  // Your custom configs here
+  {
+    rules: {
+      'import/no-named-as-default': 'off',
+      'no-restricted-exports': [
+        'error',
+        {
+          restrictedNamedExports: ['default'],
+        },
+      ],
+    },
+  }
 )

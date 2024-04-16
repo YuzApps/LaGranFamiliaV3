@@ -8,10 +8,10 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/google-fonts",
     "nuxt-og-image",
-    //...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
     "@vue-email/nuxt",
     "@nuxt/fonts",
     "@nuxt/eslint",
+    ...(isDevelopment || isWindows ? [] : ["nuxt-security"]),
   ],
 
   fonts: {
