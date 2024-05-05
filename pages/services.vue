@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-useSeoMeta({
-  title: "Servicios",
-  ogTitle: "Servicios",
-  description: "Conoce los servicios que ofrecemos en la Clínica General La Gran Familia.",
-  ogDescription: "Conoce los servicios que ofrecemos en la Clínica General La Gran Familia.",
-  ogImage: "https://example.com/image.png",
-  twitterCard: "summary_large_image",
-});
+  useSeoMeta({
+    title: 'Servicios',
+    ogTitle: 'Servicios',
+    description: 'Conoce los servicios que ofrecemos en la Clínica General La Gran Familia.',
+    ogDescription: 'Conoce los servicios que ofrecemos en la Clínica General La Gran Familia.',
+    ogImage: 'https://example.com/image.png',
+    twitterCard: 'summary_large_image',
+  });
 </script>
 
 <template>
@@ -70,14 +70,14 @@ useSeoMeta({
             </svg>
             <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
               <p>
-                Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt
-                nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque
-                bibendum.
+                En Nuestra Clínica, su salud y satisfacción son nuestra máxima prioridad. Estamos
+                aquí para cuidarlo a usted y a su familia en todas las etapas de la vida.
+                ¡Contáctenos hoy mismo para programar su próxima cita!
               </p>
             </blockquote>
             <figcaption class="mt-8 text-base">
               <div
-                class="w-fit px-4 py-0.5 cursor-pointer font-montserrat font-semibold text-stratos-blue bg-white rounded-full shadow-md"
+                class="font-montserrat text-stratos-blue w-fit cursor-pointer rounded-full bg-white px-4 py-0.5 font-semibold shadow-md"
               >
                 Contacto
               </div>
