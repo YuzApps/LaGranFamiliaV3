@@ -79,7 +79,7 @@
         <h2 class="font-maven text-[47px] font-semibold tracking-tight text-white sm:text-6xl">
           ¿Qué Ofrecemos?
         </h2>
-        <p class="mt-6 font-montserrat text-[18px] leading-8 text-gray-300">
+        <p class="font-montserrat mt-6 text-[18px] leading-8 text-gray-300">
           Brindamos consultas médicas, exámenes, evaluaciones y tratamientos. Siempre estamos listos
           para satisfacer sus necesidades y mejorar su salud. Si busca soluciones para sus
           inquietudes médicas, contáctenos hoy para programar una cita. Estamos abiertos los 7 días
@@ -92,12 +92,12 @@
     <div class="mx-auto mt-8 max-w-7xl px-6 pb-5 pt-10 sm:mt-10 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="text-base font-semibold leading-7 text-[#099541]/45">SERVICIOS</h1>
-        <p class="mt-2 font-maven text-4xl font-medium tracking-tight text-tropaz-blue sm:text-5xl">
+        <p class="font-maven text-tropaz-blue mt-2 text-4xl font-medium tracking-tight sm:text-5xl">
           Nuestros Servicios
         </p>
       </div>
       <p
-        class="mx-auto mt-6 max-w-5xl text-center font-montserrat text-lg leading-8 text-stratos-blue"
+        class="font-montserrat text-stratos-blue mx-auto mt-6 max-w-5xl text-center text-lg leading-8"
       >
         Choose an affordable plan that’s packed with the best features for engaging your audience,
         creating customer loyalty, and driving sales.
@@ -119,7 +119,7 @@
               </template>
             </IconFeature>
           </div>
-          <h2 :id="useId" class="text-center font-maven font-semibold capitalize text-tropaz-blue">
+          <h2 class="font-maven text-tropaz-blue text-center font-semibold capitalize">
             {{ service.name }}
           </h2>
 
@@ -127,7 +127,7 @@
             <li
               v-for="(feature, ftIdx) in service.items"
               :key="ftIdx"
-              class="flex gap-x-3 font-montserrat text-sm"
+              class="font-montserrat flex gap-x-3 text-sm"
             >
               <div
                 class="flex size-7 flex-shrink-0 items-center justify-center rounded-full bg-[#D8DFF3]"

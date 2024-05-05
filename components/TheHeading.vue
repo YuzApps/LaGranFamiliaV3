@@ -59,6 +59,7 @@
       @apply border-b-0 #{!important};
     }
   }
+
   .router-link-active,
   .router-link-exact-active {
     @apply border-b-2 border-b-salem-green font-semibold text-zinc-900 #{!important};

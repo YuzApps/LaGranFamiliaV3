@@ -1,5 +1,5 @@
-import { EmailParams, MailerSend, Recipient, Sender } from "mailersend";
-import { useCompiler } from "#vue-email";
+//import { EmailParams, MailerSend, Recipient, Sender } from 'mailersend';
+/*import { useCompiler } from "#vue-email";
 
 const mailerSend = new MailerSend({
   apiKey: process.env.NUXT_PUBLIC_MAILERSEND_API_KEY || "",
@@ -27,4 +27,4 @@ export default defineEventHandler(async (event) => {
   } catch (error) {
     console.error(error);
   }
-});
+});*/
