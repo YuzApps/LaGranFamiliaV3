@@ -14,6 +14,10 @@
     },
   ];
 
+  const page = inject('page');
+
+  const about = computed(() => page?.value.home.about);
+
   const urlPlayer = ref(
     'https://player.cloudinary.com/embed/?public_id=LaGranFamilia%2Fvideos%2Fvideo_source_11&cloud_name=assetss&player[posterOptions][transformation][startOffset]=14'
   );
@@ -24,15 +28,12 @@
       <div>
         <span class="font-maven uppercase text-[#099541]/45">Sobre Nosotros</span>
         <h2 class="text-tropaz-blue font-maven py-2 text-3xl font-medium leading-7 tracking-wide">
-          De Qué se Encarga Nuestra Clínica?
+          {{ about.title }}
         </h2>
       </div>
       <div>
         <p class="font-montserrat text-stratos-blue text-[16px] font-normal leading-7">
-          Nos dedicamos a proporcionar atención médica de calidad y compasiva a nuestros pacientes.
-          Con un equipo multidisciplinario de profesionales altamente capacitados y tecnología de
-          vanguardia, estamos comprometidos a brindarle la mejor atención posible para mejorar su
-          bienestar y calidad de vida.
+          {{ about.description }}
         </p>
       </div>
     </div>
