@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/eslint',
     'nuxt-og-image',
+    '@nuxthq/studio',
     ...(isDevelopment || isWindows ? [] : ['nuxt-security']),
   ],
 
@@ -17,6 +18,7 @@ export default defineNuxtConfig({
       { name: 'Montserrat', provider: 'google' },
       { name: 'Maven Pro', provider: 'google' },
     ],
+    priority: ['google'],
   },
 
   experimental: {
@@ -26,7 +28,6 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     configPath: '~/config/tailwind',
-    quiet: true,
   },
 
   image: {

@@ -87,25 +87,17 @@
 </template>
 
 <style scoped lang="scss">
-  .vertical-router-link {
-    @apply text-[18px] font-normal leading-6 tracking-wide text-gray-900;
-  }
-
   .router-link {
     @apply text-[18px] font-normal leading-6 tracking-wide text-gray-900;
 
     &.router-link-active,
     .router-link-exact-active {
-      @apply border-b-salem-green border-b-2 font-semibold text-zinc-900 #{!important};
+      @apply border-b-2 border-b-[#099343] font-semibold text-zinc-900 #{!important};
     }
   }
 
-  .contact-link {
-    @apply bg-curious-blue font-montserrat hover:bg-bahama-blue rounded-full px-4 py-1.5 text-base font-normal tracking-wide text-white transition duration-150 ease-in-out hover:shadow-md;
-
-    &.router-link-exact-active {
-      @apply border-b-0 text-white #{!important};
-    }
+  .vertical-router-link {
+    @apply text-[18px] font-normal leading-6 tracking-wide text-gray-900;
   }
 
   .logo {

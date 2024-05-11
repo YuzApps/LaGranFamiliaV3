@@ -1,4 +1,11 @@
 home:
+  block1:
+    title: "Comprometidos con el Bienestar de nuestros pacientes"
+    description: "Ya sea que busque consulta o evaluaciones, contamos con el equipo y los conocimientos necesarios para brindarle servicios de calidad."
   about:
     title: "De Qué se Encarga Nuestra Clínica?"
     description: "Nos dedicamos a proporcionar atención médica de calidad y compasiva a nuestros pacientes. Con un equipo multidisciplinario de profesionales altamente capacitados y tecnología de vanguardia, estamos comprometidos a brindarle la mejor atención posible para mejorar su bienestar y calidad de vida."
+  features:
+  quotes:
+
+

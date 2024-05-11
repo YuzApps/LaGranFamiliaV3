@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @layer base {
   body {
     font-family: "Monserrat", sans-serif;
@@ -13,6 +16,29 @@
 
   h2 {
     @apply text-tropaz-blue font-maven #{!important};
+  }
+}
+
+@layer utilities {
+
+  .text-tropaz-blue {
+    color: theme('colors.transparent');
+  }
+
+  .contact-link {
+    @apply font-montserrat hover:bg-bahama-blue rounded-full bg-[#288FBD] px-4 py-1.5 text-base font-normal tracking-wide text-white transition duration-150 ease-in-out hover:shadow-md;
+
+    &.router-link-exact-active {
+      @apply border-b-0 text-white #{!important};
+    }
+  }
+
+  .text-label {
+    @apply font-maven text-tropaz-blue text-[16px] font-semibold;
+  }
+
+  .title-video {
+    @apply font-maven text-tropaz-blue mt-4 text-lg font-semibold tracking-tight sm:text-[20px];
   }
 }
 
