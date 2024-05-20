@@ -40,6 +40,7 @@
     "mailersend": "^2.2.0",
     "nanoid": "^5.0.4",
     "std-env": "^3.7.0",
-    "vue-email": "^0.8.8"
+    "vue-email": "^0.8.8",
+    "wrangler": "^3.57.0"
   }
 }
