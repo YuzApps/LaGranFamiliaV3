@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <header class="font-montserrat z-20 bg-white shadow-md">
+  <header class="z-20 bg-white font-montserrat shadow-md">
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between p-6 sm:max-w-7xl lg:px-8"
       aria-label="Global"
@@ -43,15 +43,15 @@
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div class="lg:hidden" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-0 z-10" />
         <div
           class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
           <div class="flex items-center justify-between">
             <button
               type="button"
-              @click="mobileMenuOpen = false"
               class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              @click="mobileMenuOpen = false"
             >
               <span class="sr-only">Close menu</span>
               <svg
@@ -73,8 +73,8 @@
                   v-for="item in header.links"
                   :key="item.name"
                   :to="item.href"
-                  @click="mobileMenuOpen = false"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  @click="mobileMenuOpen = false"
                   >{{ item.name }}</NuxtLink
                 >
               </div>
