@@ -1,9 +1,15 @@
 <script lang="ts" setup>
+  const { data: page } = await useAsyncData('gallery', () => queryContent('gallery').findOne());
+
+  console.log('%c 🚀: page ', 'font-size:16px;background-color:#7F2B82;color:white;', page);
+
+  const seo = computed(() => page?.value?.seo);
+
   useSeoMeta({
-    title: 'Galería',
-    description: 'Vídeos importantes de la clínica.',
-    ogTitle: 'Vídeos importantes de la clínica.',
-    ogDescription: 'Vídeos importantes de la clínica.',
+    title: seo.value.title,
+    description: seo.value.description,
+    ogTitle: seo.value.ogTitle,
+    ogDescription: seo.value.description,
     ogImage: 'https://example.com/image.png',
     twitterCard: 'summary_large_image',
   });
@@ -14,12 +20,12 @@
     <UContainer class="pb-5 pt-10">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="font-maven text-base font-semibold uppercase leading-7 text-[#099541]/45">
-          Galería
+          {{ page.title }}
         </h1>
         <h2
-          class="font-maven text-tropaz-blue mt-2 text-3xl font-medium tracking-tight sm:text-4xl"
+          class="mt-2 font-maven text-3xl font-medium tracking-tight text-tropaz-blue sm:text-4xl"
         >
-          Vídeos importantes
+          {{ page.description }}
         </h2>
       </div>
       <div class="grid grid-cols-2 gap-6">
@@ -27,18 +33,18 @@
           <iframe
             src="https://www.youtube.com/embed/f6K-321wef4"
             class="aspect-video w-full rounded-lg shadow-lg"
-          ></iframe>
+          />
           <div class="mt-2 flex space-x-2">
             <div class="py-2">
               <IconFeature size="xl">
-                <template v-slot:icon>
+                <template #icon>
                   <NuxtImg src="/assets/img/uterus1.png" class="h-5 w-5" />
                 </template>
               </IconFeature>
             </div>
             <div class="flex flex-col">
               <h3 class="title-video">Vacunación contra el COVID-19</h3>
-              <p class="font-montserrat mt-2 text-base leading-7 text-gray-600">
+              <p class="mt-2 font-montserrat text-base leading-7 text-gray-600">
                 Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
               </p>
             </div>
@@ -48,18 +54,18 @@
           <iframe
             src="https://www.youtube.com/embed/v5O2md6KC9Q"
             class="aspect-video w-full rounded-lg shadow-lg"
-          ></iframe>
+          />
           <div class="mt-2 flex space-x-2">
             <div class="py-2">
               <IconFeature size="xl">
-                <template v-slot:icon>
+                <template #icon>
                   <NuxtImg src="/assets/img/disease1.png" class="h-5 w-5" />
                 </template>
               </IconFeature>
             </div>
             <div class="flex flex-col">
               <h3 class="title-video">Protégete contra la Influeza</h3>
-              <p class="font-montserrat mt-2 text-base leading-7 text-gray-600">
+              <p class="mt-2 font-montserrat text-base leading-7 text-gray-600">
                 Clínica General la Gran Familia, 3035 S Shiloh RD, Grandland Texas, 75041
               </p>
             </div>
@@ -73,7 +79,7 @@
         <h2 class="font-maven text-base font-semibold uppercase leading-7 text-[#099541]/45">
           Galería
         </h2>
-        <h3 class="font-maven text-tropaz-blue mt-2 text-xl font-medium tracking-tight sm:text-4xl">
+        <h3 class="mt-2 font-maven text-xl font-medium tracking-tight text-tropaz-blue sm:text-4xl">
           Nuestro Centro Médico
         </h3>
       </div>

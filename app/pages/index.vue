@@ -1,15 +1,5 @@
 <script setup lang="ts">
-  import type { ParsedContent } from '@nuxt/content/dist/types';
-
-  interface PageContent extends ParsedContent {
-    home: 'keys';
-    heroSection: 'keys';
-  }
-
-  const { data: page } = await useAsyncData('index', () =>
-    queryContent<PageContent>('/').findOne()
-  );
-
+  const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
   provide('page', page);
 
   useSeoMeta({

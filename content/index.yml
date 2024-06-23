@@ -1,4 +1,13 @@
-
+heading:
+  links:
+    - name: "Inicio"
+      url: "/"
+    - name: "Servicios"
+      url: "/services"
+    - name: "Galería"
+      url: "/gallery"
+    - name: "Citas"
+      url: "/appointment"
 home:
   block1:
     title: "Comprometidos con el Bienestar de nuestros pacientes"

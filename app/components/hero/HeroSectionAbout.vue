@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
+
   interface PrimaryFeatures {
     name: string;
     description: string;
@@ -6,7 +8,6 @@
     icon: string;
   }
 
-  const page = inject('page');
   const hero = computed(() => page?.value?.heroSection);
   const primaryFeatures = computed<PrimaryFeatures[]>(() => hero?.value.primaryFeatures);
 

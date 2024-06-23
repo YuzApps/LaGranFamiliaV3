@@ -1,5 +1,6 @@
 <script setup>
-  const { data: header } = await useAsyncData('header', () => queryContent('/header').findOne());
+  const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
+  const header = computed(() => page?.value?.heading);
   const mobileMenuOpen = ref(false);
 </script>
 

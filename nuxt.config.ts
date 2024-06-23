@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: isDevelopment,
+    enabled: true,
   },
 
   future: {
@@ -55,10 +55,10 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
-    '@nuxt/eslint',
     'nuxt-og-image',
     '@nuxthq/studio',
     ...(isDevelopment || isWindows ? [] : ['nuxt-security']),
@@ -66,7 +66,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/contact': { prerender: true },
   },
 
   runtimeConfig: {
@@ -131,10 +130,6 @@ export default defineNuxtConfig({
       },
     },
     rateLimiter: false,
-  },
-
-  tailwindcss: {
-    configPath: '~/config/tailwind',
   },
 
   ui: {
