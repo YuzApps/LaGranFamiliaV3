@@ -7,7 +7,7 @@
   }
 
   const page = inject('page');
-  const hero = computed(() => page?.value.heroSection);
+  const hero = computed(() => page?.value?.heroSection);
   const primaryFeatures = computed<PrimaryFeatures[]>(() => hero?.value.primaryFeatures);
 
   const urlPlayer = ref(
