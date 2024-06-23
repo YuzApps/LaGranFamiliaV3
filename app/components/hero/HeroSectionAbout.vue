@@ -16,7 +16,7 @@
 
   const page = inject('page');
 
-  const about = computed(() => page?.value.home.about);
+  const about = computed(() => page ?? page?.value?.home.about);
 
   const urlPlayer = ref(
     'https://player.cloudinary.com/embed/?public_id=LaGranFamilia%2Fvideos%2Fvideo_source_11&cloud_name=assetss&player[posterOptions][transformation][startOffset]=14'
@@ -27,12 +27,12 @@
     <div class="grid grid-cols-2">
       <div>
         <span class="font-maven uppercase text-[#099541]/45">Sobre Nosotros</span>
-        <h2 class="text-tropaz-blue font-maven py-2 text-3xl font-medium leading-7 tracking-wide">
+        <h2 class="py-2 font-maven text-3xl font-medium leading-7 tracking-wide text-tropaz-blue">
           {{ about.title }}
         </h2>
       </div>
       <div>
-        <p class="font-montserrat text-stratos-blue text-[16px] font-normal leading-7">
+        <p class="font-montserrat text-[16px] font-normal leading-7 text-stratos-blue">
           {{ about.description }}
         </p>
       </div>
@@ -53,7 +53,7 @@
           class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-1 lg:gap-y-16"
         >
           <div v-for="feature in primaryFeatures" :key="feature.icon" class="relative pl-16">
-            <dt class="text-tropaz-blue font-maven text-[20px] font-semibold leading-7">
+            <dt class="font-maven text-[20px] font-semibold leading-7 text-tropaz-blue">
               <div
                 class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg"
               >
@@ -73,7 +73,7 @@
               {{ feature.name }}
             </dt>
             <dd
-              class="font-montserrat text-stratos-blue mt-2 text-base font-normal leading-7 tracking-wide"
+              class="mt-2 font-montserrat text-base font-normal leading-7 tracking-wide text-stratos-blue"
             >
               {{ feature.description }}
             </dd>

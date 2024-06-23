@@ -29,6 +29,10 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   experimental: {
     sharedPrerenderData: true,
     payloadExtraction: true,

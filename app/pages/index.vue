@@ -1,6 +1,8 @@
 <script setup lang="ts">
   const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
 
+  console.log(page);
+
   provide('page', page);
 
   useSeoMeta({
