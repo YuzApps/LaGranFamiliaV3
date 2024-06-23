@@ -1,0 +1,10 @@
+
+links:
+  - name: "Inicio"
+    url: "/"
+  - name: "Servicios"
+    url: "/services"
+  - name: "Galería"
+    url: "/gallery"
+  - name: "Citas"
+    url: "/appointment"
