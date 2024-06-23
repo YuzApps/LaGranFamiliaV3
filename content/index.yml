@@ -2,20 +2,23 @@ home:
   block1:
     title: "Comprometidos con el Bienestar de nuestros pacientes"
     description: "Ya sea que busque consulta o evaluaciones, contamos con el equipo y los conocimientos necesarios para brindarle servicios de calidad."
-  about:
-    title: "De Qué se Encarga Nuestra Clínica?"
-    description: "Nos dedicamos a proporcionar atención médica de calidad y compasiva a nuestros pacientes. Con un equipo multidisciplinario de profesionales altamente capacitados y tecnología de vanguardia, estamos comprometidos a brindarle la mejor atención posible para mejorar su bienestar y calidad de vida."
   features:
   quotes:
 
 
 heroSection:
   title: "Sobre Nosotros"
+  backgroundUrl: "/assets/img/Blob.png"
+  about:
+    title: "De Qué se Encarga Nuestra Clínica?"
+    description: "Nos dedicamos a proporcionar atención médica de calidad y compasiva a nuestros pacientes. Con un equipo multidisciplinario de profesionales altamente capacitados y tecnología de vanguardia, estamos comprometidos a brindarle la mejor atención posible para mejorar su bienestar y calidad de vida."
   primaryFeatures:
     - name: "Nuevo Servicio de Ginecología"
       description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades."
       icon: "IconGynecology"
+      imageUrl: "/assets/img/uterus.png"
     - name: "Atendemos Todo Tipo de Enfermedad"
       description: "Contamos con un laboratorio de análisis clínicos para la detección de enfermedades."
       icon: "IconHeartPlus"
+      imageUrl: "/assets/img/health-care.png"
 

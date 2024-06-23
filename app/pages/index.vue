@@ -1,7 +1,14 @@
 <script setup lang="ts">
-  const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
+  import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
-  console.log(page);
+  interface PageContent extends ParsedContent {
+    home: 'keys';
+    heroSection: 'keys';
+  }
+
+  const { data: page } = await useAsyncData('index', () =>
+    queryContent<PageContent>('/').findOne()
+  );
 
   provide('page', page);
 
